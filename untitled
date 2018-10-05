@@ -1,0 +1,108 @@
+
+
+import quandl
+import sys
+import psycopg2
+
+def main():
+	#Define our connection string
+	conn_string = "host='localhost' dbname='bijwalp' user='bijwalp' password='secret'"
+ 
+	# print the connection string we will use to connect
+	print "Connecting to database\n	->%s" % (conn_string)
+ 
+	# get a connection, if a connect cannot be made an exception will be raised here
+	conn = psycopg2.connect(conn_string)
+ 
+	# conn.cursor will return a cursor object, you can use this cursor to perform queries
+	cursor = conn.cursor('select ')
+	print "Connected!\n"
+ 
+
+
+
+
+
+
+quandl.ApiConfig.api_key = 'naYkqVsmrfQQCZes6EfT'
+
+
+
+data = quandl.get_table('WIKI/PRICES', qopts = { 'columns': ['ticker', 'date', 'close'] }, ticker = ['AAPL', 'MSFT'], date = { 'gte': '2016-01-01', 'lte': '2017-12-31' })
+
+
+quandl.get('NSE/ABIRLANUVO')
+
+, collapse="monthly")
+
+
+data = quandl.get("EIA/PET_RWTC_D", collapse="monthly")
+
+
+data = quandl.get_table('NSE', qopts = { 'columns': ['ticker', 'date', 'close'] }, ticker = ['ABIRLANUVO'], date = { 'gte': '2016-01-01', 'lte': '2017-12-31' })
+
+
+qopts.columns
+
+
+https://www.quandl.com/api/v3/datatables/AR/MWCS/metadata.json?api_key=YOURAPIKEY
+
+
+
+https://www.quandl.com/api/v3/datatables/AR/MWCS/metadata.json?api_key='naYkqVsmrfQQCZes6EfT'
+
+
+Connect Postgres
+
+pip install psycopg2
+
+
+drop TABLE NSE_metadata;
+
+CREATE TABLE NSE_metadata (
+ code VARCHAR (50) UNIQUE NOT NULL,
+ name VARCHAR (355) NOT NULL,
+ description VARCHAR (1000) UNIQUE NOT NULL,
+ refreshed_at DATE NOT NULL
+);
+
+
+COPY NSE_metadata(code,name,description,refreshed_at) 
+FROM '/Users/bijwalp/Documents/Personal/Stock_Analysis/NSE_metadata.csv' DELIMITER ',' CSV HEADER;
+
+NSE_metadata
+
+
+
+
+>>> UUID - 
+
+d_conn=conn.cursor()
+
+d_conn.execute("select * from information_schema.tables")
+
+records = d_conn.fetchall()
+
+
+
+
+
+
+
+https://www.quandl.com/api/v3/databases/AMFI/metadata?api_key=naYkqVsmrfQQCZes6EfT
+
+
+
+import urllib
+import requests
+
+print('Beginning file download with urllib2...')
+
+url = 'https://www.quandl.com/api/v3/databases/AMFI/metadata?api_key=naYkqVsmrfQQCZes6EfT'
+
+r = requests.get(url, allow_redirects=False,verify=False)
+
+
+urllib.urlretrieve(url, '/Users/bijwalp/Downloads')  
+
+
